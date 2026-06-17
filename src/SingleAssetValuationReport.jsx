@@ -34,18 +34,18 @@ const reportData = {
       component: ComparableEvidenceSection
     },
     {
-      title: "Income & Yield",
-      headline: "Income evidence supports the value but does not dominate it.",
+      title: "Value Enhancements",
+      headline: "Asset-level upgrade sensitivities and a worked enhancement case.",
       description:
-        "The rental estimate sits within local family-house evidence and implies a 4.2% gross yield. Yield support is adequate, with value still driven principally by owner-occupier comparable pricing.",
-      component: IncomeYieldSection
+        "The section tests extension-led value creation, efficiency-led income benefits and a combined upgrade case. Figures are illustrative sensitivities based on the adopted subject valuation.",
+      component: ValueEnhancementsReturnsSection
     },
     {
-      title: "Risk & Outlook",
-      headline: "Value outlook is constructive if capex remains controlled.",
+      title: "Investment Analysis",
+      headline: "Cash flow model for acquisition, income, financing and disposal mechanics.",
       description:
-        "The forward view assumes modest £/sqm growth, stable rental progression and no severe liquidity shock. Downside widens if survey capex rises or comparable evidence thins.",
-      component: RiskOutlookSection
+        "The schedule sets out a simple multi-year cash flow model from acquisition through income, operating costs, financing and disposal. Values are illustrative and should be read as an investment analysis rather than a valuation conclusion.",
+      component: InvestmentProformaSection
     }
   ],
   summary: {
@@ -129,85 +129,83 @@ const reportData = {
     ],
   },
   relative: {
-    overview: [
+    domains: [
       {
-        label: "Market value",
-        subject: "£875k",
-        localText: "62nd percentile locally",
-        nationalText: "94th percentile nationally",
-        read: "Above the local midpoint and top-decile against the UK family-house frame."
+        title: "Headline Comparisons",
+        size: "wide",
+        read: "Like-for-like estimate for a 104 sqm freehold terrace, compared with equivalent locality, London and national market frames.",
+        columns: ["Metric", "Property", "Locality", "London", "National"],
+        rows: [
+          ["Market value", "£875k", "£830k", "£805k", "£286k"],
+          ["Capital value", "£8,420", "£8,090", "£7,760", "£3,160"],
+          ["Implied rent", "£3,075", "£2,960", "£2,875", "£1,150"],
+          ["Est. Gross yield", "4.2%", "4.1%", "4.0%", "4.8%"]
+        ]
       },
       {
-        label: "Price intensity",
-        subject: "£8,420/m²",
-        localText: "67th percentile locally",
-        nationalText: "96th percentile nationally",
-        read: "Richer than most nearby peers and far above the national house benchmark."
+        title: "Accommodation Scale",
+        size: "narrow",
+        read: "Internal area and living-space count compare the subject with equivalent terrace stock.",
+        columns: ["Frame", "Area", "Living spaces"],
+        rows: [
+          ["Subject", "104 m²", "5"],
+          ["Locality", "96 m²", "4.6"],
+          ["London", "93 m²", "4.4"],
+          ["National", "88 m²", "4.2"]
+        ]
       },
       {
-        label: "Rental support",
-        subject: "£3,075 pcm",
-        localText: "59th percentile locally",
-        nationalText: "93rd percentile nationally",
-        read: "Rent evidence supports the valuation and remains strong beyond the local market."
+        title: "Asset Proximity",
+        size: "narrow",
+        read: "Subject-level proximity measures capture access to green space, amenities, roads and transport.",
+        columns: ["Measure", "Nearest", "≤1km"],
+        rows: [
+          ["Green space", "0.4 mi", "3 parks"],
+          ["Amenities", "6 min", "42 places"],
+          ["Stations", "0.6 mi", "2 stations"],
+          ["Schools", "0.3 mi", "6 schools"]
+        ]
       },
       {
-        label: "Liquidity",
-        subject: "38-52 days",
-        localText: "71st percentile locally",
-        nationalText: "88th percentile nationally",
-        read: "Expected sale timing is faster than typical local and national stock."
+        title: "Property Attributes",
+        size: "wide",
+        read: "Non-financial attributes compare the subject with equivalent 104 sqm freehold terrace stock across wider market frames.",
+        columns: ["Metric", "Property", "Locality", "London", "National"],
+        rows: [
+          ["Plot size", "0.045 ac", "0.036 ac", "0.034 ac", "0.029 ac"],
+          ["Building / plot", "0.53x", "0.61x", "0.64x", "0.70x"],
+          ["Extension count", "1", "0.7", "0.5", "0.4"],
+          ["Avg room size", "17.3 m²", "16.1 m²", "15.4 m²", "14.8 m²"]
+        ]
+      },
+      {
+        title: "Market Conditions",
+        size: "wide",
+        read: "Postcode market structure is compared with wider frames, including detached pricing premium.",
+        columns: ["Metric", "Postcode", "Locality", "London", "National"],
+        rows: [
+          ["Sales / km²", "18", "14", "11", "5"],
+          ["Turnover", "4.8%", "4.1%", "3.6%", "2.4%"],
+          ["New completions", "38", "214", "9,840", "182k"],
+          ["Detached premium", "+6%", "+9%", "-3%", "+18%"]
+        ]
+      },
+      {
+        title: "Premiums",
+        size: "narrow",
+        read: "Pricing premiums compare freehold and new-build uplifts across each market frame.",
+        columns: ["Frame", "Freehold", "New-build"],
+        rows: [
+          ["Postcode", "+8.4%", "+11.2%"],
+          ["Locality", "+7.1%", "+9.4%"],
+          ["London", "+5.8%", "+7.8%"],
+          ["National", "+3.2%", "+5.1%"]
+        ]
       }
-    ],
-    maps: [
-      {
-        title: "Local area position",
-        subtitle: "Relative to nearby Wandsworth family-house / terrace evidence.",
-        xLabel: "Value percentile",
-        yLabel: "Characteristic percentile",
-        bandLabel: "Typical local band",
-        subject: { x: 67, y: 61, label: "Subject" },
-        benchmark: { x: 50, y: 50, label: "Local median" },
-        band: { x1: 42, x2: 61, y1: 44, y2: 58 },
-        read: "Upper-right of the local market: a little richer and a little stronger in spec than the local midpoint."
-      },
-      {
-        title: "National position",
-        subtitle: "Relative to the wider UK 3-bed terrace / family-house frame.",
-        xLabel: "Value percentile",
-        yLabel: "Characteristic percentile",
-        bandLabel: "Typical national band",
-        subject: { x: 94, y: 78, label: "Subject" },
-        benchmark: { x: 50, y: 50, label: "National median" },
-        band: { x1: 33, x2: 58, y1: 38, y2: 60 },
-        read: "Clearly top-right nationally: high-value, above-average quality and notably more liquid than the UK midpoint."
-      }
-    ],
-    valueRanks: [
-      { label: "Market value", subject: "£875k", local: 62, national: 94, localText: "62nd pct local", nationalText: "94th pct national" },
-      { label: "£/m²", subject: "£8,420", local: 67, national: 96, localText: "67th pct local", nationalText: "96th pct national" },
-      { label: "Rent pcm", subject: "£3,075", local: 59, national: 93, localText: "59th pct local", nationalText: "93rd pct national" },
-      { label: "Yield support", subject: "4.2%", local: 54, national: 38, localText: "54th pct local", nationalText: "38th pct national" },
-      { label: "Liquidity", subject: "38-52d", local: 71, national: 88, localText: "71st pct local", nationalText: "88th pct national" }
-    ],
-    characteristicRanks: [
-      { label: "Floor area", subject: "104 m²", local: 58, national: 76, localText: "58th pct local", nationalText: "76th pct national" },
-      { label: "Bedroom count", subject: "3 beds", local: 61, national: 73, localText: "61st pct local", nationalText: "73rd pct national" },
-      { label: "Tenure quality", subject: "Freehold", local: 66, national: 81, localText: "66th pct local", nationalText: "81st pct national" },
-      { label: "EPC / condition", subject: "C / good", local: 52, national: 57, localText: "52nd pct local", nationalText: "57th pct national" },
-      { label: "Property-type fit", subject: "Terrace", local: 64, national: 69, localText: "64th pct local", nationalText: "69th pct national" },
-      { label: "Owner-occupier fit", subject: "Family house", local: 69, national: 79, localText: "69th pct local", nationalText: "79th pct national" }
-    ],
-    benchmarkRows: [
-      ["Measure", "Subject", "Local", "National", "Read"],
-      ["Value", "£875k", "£830k", "£286k", "Above local / far above UK"],
-      ["£/m²", "£8,420", "£8,090", "£3,160", "Richer pricing"],
-      ["Rent", "£3,075", "£2,960", "£1,150", "Supported"],
-      ["Area", "104 m²", "96 m²", "88 m²", "Larger"],
-      ["Timing", "38-52d", "48-62d", "71-92d", "Faster exit"]
     ]
   },
   comps: {
+    evidenceRead: "Eight nearby terrace transactions provide a tight evidence set, with strongest weight on recent, close-proximity sales and limited £/sqm variance after time adjustment.",
     evidenceRows: [
       { rank: "01", name: "12 Westbridge Rd", meta: "Terrace · 101 m² · Mar 2026", distance: "0.08 mi", price: "£870k", ppsqm: "£8,610", weight: "30%", fit: "92", timePrice: "£853k", timePpsqm: "£8,438" },
       { rank: "02", name: "44 Putney Bridge Rd", meta: "Terrace · 109 m² · Jan 2026", distance: "0.19 mi", price: "£908k", ppsqm: "£8,330", weight: "24%", fit: "86", timePrice: "£922k", timePpsqm: "£8,455" },
@@ -221,6 +219,7 @@ const reportData = {
     evidenceStats: [
       {
         title: "Pricing Evidence",
+        read: "Tight pricing cluster near adopted £/sqm.",
         metrics: [
           { label: "Weighted £/sqm", value: "£8,420" },
           { label: "Median Comp", value: "£8,330" },
@@ -229,6 +228,7 @@ const reportData = {
       },
       {
         title: "Evidence Quality",
+        read: "Close, recent terrace comps carry weight.",
         metrics: [
           { label: "Evidence Depth", value: "8 comps" },
           { label: "Prime Weight", value: "72%" },
@@ -237,6 +237,7 @@ const reportData = {
       },
       {
         title: "Normalization",
+        read: "Light adjustment after time and distance.",
         metrics: [
           { label: "Mean Distance", value: "0.29 mi" },
           { label: "Recency Window", value: "10 mo" },
@@ -245,54 +246,116 @@ const reportData = {
       }
     ]
   },
-  income: {
-    rentRows: [
-      ["Subject estimate", "£3,075", "£296", "4.2%", "Base"],
-      ["Family-house comp", "£3,150", "£301", "4.3%", "Above"],
-      ["Terraced median", "£2,950", "£284", "4.1%", "Benchmark"],
-      ["Premium finish", "£3,325", "£315", "4.4%", "Ceiling"],
-      ["Lower finish", "£2,850", "£274", "3.9%", "Downside"],
-      ["LSOA house rent", "£2,960", "£286", "4.1%", "Local base"],
-      ["Investor floor", "£2,875", "£276", "4.0%", "Floor"]
+  investment: {
+    extensionRows: [
+      ["One-bed Extension", "+18 m²", "£74k", "£975k", "+£26k", "£3,360", "+£285", "-0.06 pp"],
+      ["Two-bed Extension", "+30 m²", "£126k", "£1.07m", "+£69k", "£3,585", "+£510", "-0.18 pp"],
+      ["Loft Conversion", "+24 m²", "£96k", "£1.02m", "+£49k", "£3,465", "+£390", "-0.12 pp"],
+      ["One-bed Ext. + Loft", "+42 m²", "£178k", "£1.17m", "+£117k", "£3,835", "+£760", "-0.27 pp"]
     ],
-    incomeStack: [
-      { label: "Gross yield", value: "4.2%", width: 62 },
-      { label: "Local house yield", value: "4.1%", width: 58 },
-      { label: "Rent cover", value: "1.08x", width: 66 },
-      { label: "Income confidence", value: "74", width: 74 },
-      { label: "ERV premium", value: "+3.8%", width: 68 },
-      { label: "Investor floor", value: "£835k", width: 52 }
+    retrofitGroups: [
+      {
+        title: "Solar PV Grid Export",
+        read: "Export-led PV sensitivity based on plant size.",
+        rows: [
+          ["3.6 kW", "£520", "£8k", "+0.06 pp"],
+          ["4.8 kW", "£690", "£10k", "+0.08 pp"],
+          ["5.6 kW", "£820", "£12k", "+0.10 pp"],
+          ["7.2 kW", "£1.1k", "£15k", "+0.13 pp"]
+        ]
+      },
+      {
+        title: "Solar PV Battery Powered",
+        read: "Self-consumption case with battery storage.",
+        rows: [
+          ["3.6 kW", "£780", "£13k", "+0.09 pp"],
+          ["4.8 kW", "£1.0k", "£16k", "+0.12 pp"],
+          ["5.6 kW", "£1.3k", "£18k", "+0.15 pp"],
+          ["7.2 kW", "£1.6k", "£22k", "+0.18 pp"]
+        ]
+      },
+      {
+        title: "Heat Pump",
+        read: "Heat pump sensitivity by installed system size.",
+        rows: [
+          ["6 kW", "£640", "£14k", "+0.07 pp"],
+          ["8 kW", "£760", "£17k", "+0.09 pp"],
+          ["10 kW", "£920", "£22k", "+0.11 pp"],
+          ["12 kW", "£1.1k", "£25k", "+0.13 pp"]
+        ]
+      },
+      {
+        title: "Insulation",
+        read: "Insulation sensitivity by coverage level.",
+        rows: [
+          ["Loft only", "£260", "£2k", "+0.03 pp"],
+          ["Loft + wall", "£610", "£11k", "+0.07 pp"],
+          ["Wall + floor", "£820", "£16k", "+0.10 pp"],
+          ["Full Fabric", "£1.1k", "£24k", "+0.13 pp"]
+        ]
+      }
     ],
-    sensitivity: [
-      ["Downside rent", "£2,850", "3.9%", "£835k value support"],
-      ["Base rent", "£3,075", "4.2%", "£875k central"],
-      ["Upside rent", "£3,325", "4.4%", "£910k ceiling"],
-      ["Investor floor", "£2,875", "4.0%", "Yield support threshold"]
-    ]
-  },
-  risk: {
-    riskRows: [
-      ["Condition variance", "Medium", "£18k reserve", "-2.1%"],
-      ["Pricing stretch", "Low", "Inside evidence range", "-0.8%"],
-      ["Liquidity timing", "Low", "Active local turnover", "-0.5%"],
-      ["Supply pressure", "Medium", "Pipeline rising", "-1.2%"],
-      ["Survey risk", "Medium", "No intrusive survey", "-1.6%"],
-      ["Rental fallback", "Low", "Yield support stable", "+0.4%"]
-    ],
-    scenarios: [
-      ["Optimistic", "£910k", "£8,750", "£3,250", "32-42d", "Clean"],
-      ["Base case", "£875k", "£8,420", "£3,075", "38-52d", "Base"],
-      ["Pessimistic", "£835k", "£8,030", "£2,900", "60-75d", "Capex"],
-      ["Income floor", "£825k", "£7,930", "£2,750", "65-85d", "Yield"],
-      ["Forced sale", "£810k", "£7,790", "£2,875", "75-90d", "Forced"]
-    ],
-    outlookRows: [
-      ["£/sqm trend", "£8,420", "£8,620", "Monitor if <£8,100"],
-      ["Rent pcm", "£3,075", "£3,190", "Monitor if <£2,900"],
-      ["Comparable depth", "5 strong", "Stable", "Monitor if <3 strong"],
-      ["Capex reserve", "£18k", "Unchanged", "Review if >£30k"],
-      ["Exit period", "38-52d", "Stable", "Review if >70d"]
-    ]
+    workedCase: {
+      title: "Worked Upgrade Case",
+      cases: [
+        {
+          title: "Base Case",
+          tag: "Current",
+          read: "Current position before upgrades.",
+          metrics: [
+            ["Value", "£875k"],
+            ["12m Income", "£36.9k"],
+            ["GIY", "4.20%"],
+            ["Rooms", "2"],
+            ["Beds", "3 beds"],
+            ["Floor Area", "104 m²"]
+          ]
+        },
+        {
+          title: "Example Upgrade",
+          tag: "Loft + opex",
+          read: "Loft conversion plus opex savings.",
+          metrics: [
+            ["Value", "£1.02m"],
+            ["12m Income", "£42.7k"],
+            ["GIY", "4.18%"],
+            ["Rooms", "3"],
+            ["Beds", "4 beds"],
+            ["Floor Area", "128 m²"]
+          ]
+        }
+      ]
+    },
+    proforma: {
+      columns: ["Line Item", "Year 0", "Year 1", "Year 2", "Year 3", "Year 4", "Year 5", "Year 6", "Year 7"],
+      rows: [
+        { type: "section", label: "Purchase Price", metrics: [["Acq. Fees", "2.0%"], ["SDLT", "6.5%"]] },
+        { type: "item", label: "Acquisition Cost", values: ["£875k", "—", "—", "—", "—", "—", "—", "—"] },
+        { type: "item", label: "SDLT + Acq. Fees", values: ["£39k", "—", "—", "—", "—", "—", "—", "—"] },
+        { type: "total", label: "Total Purchase", values: ["£914k", "—", "—", "—", "—", "—", "—", "—"] },
+        { type: "section", label: "Income", metrics: [["Rent Growth", "3.0%"], ["Expense Growth", "3.0%"]] },
+        { type: "item", label: "Gross Rental Income", values: ["—", "£36.9k", "£38.0k", "£39.1k", "£40.3k", "£41.5k", "£42.7k", "£44.0k"] },
+        { type: "item", label: "Operational Expenses", values: ["—", "-£5.5k", "-£5.7k", "-£5.8k", "-£6.0k", "-£6.2k", "-£6.4k", "-£6.6k"] },
+        { type: "total", label: "Net Operating Income", values: ["—", "£31.4k", "£32.3k", "£33.3k", "£34.3k", "£35.3k", "£36.3k", "£37.4k"] },
+        { type: "section", label: "Disposal", metrics: [["Disp. Fees", "2.0%"], ["CGT", "0.0%"]] },
+        { type: "item", label: "Disposal Value", values: ["—", "—", "—", "—", "—", "—", "—", "£1.12m"] },
+        { type: "item", label: "CGT + Disp. Fees", values: ["—", "—", "—", "—", "—", "—", "—", "-£22k"] },
+        { type: "total", label: "Total Disposal", values: ["—", "—", "—", "—", "—", "—", "—", "£1.10m"] },
+        { type: "section", label: "Unlevered Cash Flow", metrics: [["IRR", "6.2%"], ["Equity Multiple", "1.47x"], ["Cash-on-Cash Yield", "18.2%"]], result: true },
+        { type: "item", label: "Net Operating Income", values: ["—", "£31.4k", "£32.3k", "£33.3k", "£34.3k", "£35.3k", "£36.3k", "£37.4k"] },
+        { type: "item", label: "Acquisition & Disposal", values: ["-£914k", "—", "—", "—", "—", "—", "—", "£1.10m"] },
+        { type: "total", label: "Unlevered Cash Flow", values: ["-£914k", "£31.4k", "£32.3k", "£33.3k", "£34.3k", "£35.3k", "£36.3k", "£1.14m"] },
+        { type: "section", label: "Financing", metrics: [["Mortgage Type", "Repayment"], ["LTV", "60%"], ["Initial Rate", "5.25%"], ["Reversion Rate", "7.75% SVR"], ["Term", "25 years"]] },
+        { type: "item", label: "Financing Proceeds", values: ["£525k", "—", "—", "—", "—", "—", "—", "—"] },
+        { type: "item", label: "Financing Fees", values: ["-£8k", "—", "—", "—", "—", "—", "—", "—"] },
+        { type: "item", label: "Principal & Interest", values: ["—", "-£32.8k", "-£32.7k", "-£32.5k", "-£32.4k", "-£32.2k", "-£32.1k", "-£508.9k"] },
+        { type: "total", label: "Debt Flows", values: ["£517k", "-£32.8k", "-£32.7k", "-£32.5k", "-£32.4k", "-£32.2k", "-£32.1k", "-£508.9k"] },
+        { type: "section", label: "Levered Cash Flow", metrics: [["IRR", "7.0%"], ["Equity Multiple", "1.60x"], ["Cash-on-Cash Yield", "1.0%"]], result: true },
+        { type: "item", label: "Unlevered Cash Flow", values: ["-£914k", "£31.4k", "£32.3k", "£33.3k", "£34.3k", "£35.3k", "£36.3k", "£1.14m"] },
+        { type: "item", label: "Debt Flows", values: ["£517k", "-£32.8k", "-£32.7k", "-£32.5k", "-£32.4k", "-£32.2k", "-£32.1k", "-£508.9k"] },
+        { type: "total", label: "Levered Cash Flow", values: ["-£397k", "-£1.4k", "-£0.4k", "£0.8k", "£1.9k", "£3.1k", "£4.2k", "£629k"] }
+      ]
+    }
   }
 };
 
@@ -403,21 +466,12 @@ function SectionBar({ activeSection, count, title, onPrevious, onNext }) {
   );
 }
 
-function SectionLead({ section }) {
-  return (
-    <section className="section-lead">
-      <h2>{section.headline}</h2>
-      <p>{section.description}</p>
-    </section>
-  );
-}
-
 function ValuationSummarySection({ section, data }) {
   const summary = data.summary;
 
   return (
     <section className="valuation-layout valuation-summary-layout">
-      <Panel title="Subject & Estimate" className="summary-subject-panel">
+      <Panel title="Valuation Overview" className="summary-subject-panel">
         <SubjectValuationSheet identity={summary.identity} estimate={summary.estimate} />
       </Panel>
       <Panel title="Six-month Value Path" className="summary-chart-panel">
@@ -450,130 +504,85 @@ function SummaryHeadline({ title }) {
 }
 
 function RelativePerformanceSection({ section, data }) {
+  const assetDomains = data.relative.domains.slice(0, 4);
+  const marketDomains = data.relative.domains.slice(4);
+
   return (
-    <section className="valuation-layout relative-layout">
-      <Panel className="relative-summary-panel">
-        <SectionLead section={section} />
-        <PositioningOverviewCards cards={data.relative.overview} />
-      </Panel>
-      {data.relative.maps.map((map) => (
-        <Panel key={map.title} title={map.title} meta={map.subtitle}>
-          <PositioningMap map={map} />
+    <section className="valuation-layout positioning-layout">
+      <div className="positioning-group-label">
+        <span>Asset-Level Comparisons</span>
+      </div>
+      {assetDomains.map((domain) => (
+        <Panel key={domain.title} title={domain.title} className={`positioning-panel is-${domain.size}`}>
+          <PositioningDomainSheet domain={domain} />
         </Panel>
       ))}
-      <Panel title="Value positioning" className="relative-ranks-panel">
-        <PositioningRankCards rows={data.relative.valueRanks} />
-      </Panel>
-      <Panel title="Characteristic positioning" className="relative-ranks-panel">
-        <PositioningRankCards rows={data.relative.characteristicRanks} />
-      </Panel>
+      <div className="positioning-group-label">
+        <span>Local Market Comparisons</span>
+      </div>
+      {marketDomains.map((domain) => (
+        <Panel key={domain.title} title={domain.title} className={`positioning-panel is-${domain.size}`}>
+          <PositioningDomainSheet domain={domain} />
+        </Panel>
+      ))}
     </section>
   );
 }
 
-function PositioningOverviewCards({ cards }) {
+function PositioningDomainSheet({ domain }) {
   return (
-    <div className="positioning-overview-cards">
-      {cards.map((card) => (
-        <article key={card.label} className="positioning-overview-card">
-          <header>
-            <span>{card.label}</span>
-            <strong>{card.subject}</strong>
-          </header>
-          <p>{card.read}</p>
-          <footer>
-            <em>{card.localText}</em>
-            <em>{card.nationalText}</em>
-          </footer>
-        </article>
-      ))}
-    </div>
-  );
-}
-
-function PositioningMap({ map }) {
-  const subjectStyle = { left: `${map.subject.x}%`, bottom: `${map.subject.y}%` };
-  const benchmarkStyle = { left: `${map.benchmark.x}%`, bottom: `${map.benchmark.y}%` };
-  const bandStyle = {
-    left: `${map.band.x1}%`,
-    width: `${map.band.x2 - map.band.x1}%`,
-    bottom: `${map.band.y1}%`,
-    height: `${map.band.y2 - map.band.y1}%`
-  };
-
-  return (
-    <div className="positioning-map-panel">
-      <div className="positioning-map-frame">
-        <div className="positioning-map-grid" aria-hidden="true">
-          <div />
-          <div />
-          <div />
-          <div />
-        </div>
-        <div className="positioning-map-band" style={bandStyle} aria-hidden="true" />
-        <div className="positioning-map-axis positioning-map-axis-x">
-          <span>Lower value</span>
-          <strong>{map.xLabel}</strong>
-          <span>Higher value</span>
-        </div>
-        <div className="positioning-map-axis positioning-map-axis-y">
-          <span>Stronger characteristics</span>
-          <strong>{map.yLabel}</strong>
-          <span>Weaker characteristics</span>
-        </div>
-        <div className="positioning-map-marker is-benchmark" style={benchmarkStyle}>
-          <b />
-          <span>{map.benchmark.label}</span>
-        </div>
-        <div className="positioning-map-marker is-subject" style={subjectStyle}>
-          <b />
-          <span>{map.subject.label}</span>
-        </div>
-        <p className="positioning-map-band-label">{map.bandLabel}</p>
-      </div>
-      <div className="positioning-map-summary">
-        <strong>{`${formatOrdinal(map.subject.x)} pct value / ${formatOrdinal(map.subject.y)} pct characteristics`}</strong>
-        <p>{map.read}</p>
-      </div>
-    </div>
-  );
-}
-
-function formatOrdinal(value) {
-  const mod10 = value % 10;
-  const mod100 = value % 100;
-
-  if (mod10 === 1 && mod100 !== 11) {
-    return `${value}st`;
-  }
-
-  if (mod10 === 2 && mod100 !== 12) {
-    return `${value}nd`;
-  }
-
-  if (mod10 === 3 && mod100 !== 13) {
-    return `${value}rd`;
-  }
-
-  return `${value}th`;
-}
-
-function PositioningComparisonPanel({ rows }) {
-  return (
-    <div className="positioning-comparison-panel">
-      <div className="positioning-comparison-panel-head">
-        <span>Measure</span>
-        <span>Subject</span>
-        <span>Local</span>
-        <span>National</span>
-        <span>Read</span>
-      </div>
-      <div className="positioning-comparison-panel-body">
-        {rows.map((row) => (
-          <article key={row[0]} className="positioning-comparison-panel-row">
-            {row.map((cell) => (
-              <span key={`${row[0]}-${cell}`}>{cell}</span>
+    <div className="positioning-domain-content">
+      {domain.read ? <p className="positioning-domain-read">{domain.read}</p> : null}
+      {domain.type === "points" ? (
+        <PositioningPointTile points={domain.points} axis={domain.axis} />
+      ) : domain.type === "ranges" ? (
+        <PositioningRangeTile ranges={domain.ranges} axis={domain.axis} />
+      ) : domain.type === "bars" ? (
+        <PositioningBarTile bars={domain.bars} />
+      ) : (
+        <div className={`positioning-domain-sheet cols-${domain.columns.length}`}>
+          <div className="positioning-domain-sheet-head">
+            {domain.columns.map((column) => (
+              <span key={column}>{column}</span>
             ))}
+          </div>
+          <div className={`positioning-domain-sheet-body rows-${domain.rows.length}`}>
+            {domain.rows.map((row) => (
+              <article key={`${domain.title}-${row[0]}`} className="positioning-domain-sheet-row">
+                {row.map((cell, index) => (
+                  <PositioningDomainCell key={`${domain.title}-${row[0]}-${index}`} cell={cell} />
+                ))}
+              </article>
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
+function PositioningPointTile({ points, axis }) {
+  return (
+    <div className="positioning-point-tile">
+      <div className="positioning-point-plot" aria-hidden="true">
+        <i />
+        {points.map((point) => (
+          <b
+            key={point.label}
+            className={point.subject ? "is-subject" : undefined}
+            style={{ left: `${point.position}%` }}
+          />
+        ))}
+      </div>
+      <div className="positioning-point-axis" aria-hidden="true">
+        <span>{axis?.[0]}</span>
+        <span>{axis?.[1]}</span>
+      </div>
+      <div className="positioning-point-list">
+        {points.map((point) => (
+          <article key={point.label}>
+            <span>{point.label}</span>
+            <strong>{point.value}</strong>
           </article>
         ))}
       </div>
@@ -581,61 +590,59 @@ function PositioningComparisonPanel({ rows }) {
   );
 }
 
-function PositioningDomainMatrix({ groups }) {
+function PositioningRangeTile({ ranges, axis }) {
   return (
-    <div className="positioning-domain-matrix">
-      <div className="positioning-domain-head">
-        <span>Measure</span>
-        <span>Subject</span>
-        <span>Local Area</span>
-        <span>National</span>
-        <span>Position</span>
-      </div>
-      <div className="positioning-domain-body">
-        {groups.map((group) => (
-          <section key={group.title} className="positioning-domain-group">
-            <h3>{group.title}</h3>
-            <div>
-              {group.rows.map((row) => (
-                <article key={`${group.title}-${row[0]}`} className="positioning-domain-row">
-                  {row.map((cell) => (
-                    <span key={`${group.title}-${row[0]}-${cell}`}>{cell}</span>
-                  ))}
-                </article>
-              ))}
+    <div className="positioning-range-tile">
+      {ranges.map((range) => {
+        const midpoint = range.start + (range.end - range.start) / 2;
+
+        return (
+          <article key={range.label} className="positioning-range-row">
+            <header>
+              <span>{range.label}</span>
+              <strong>{range.value}</strong>
+              <em>{range.meta}</em>
+            </header>
+            <div aria-hidden="true">
+              <i>
+                <b style={{ left: `${range.start}%`, width: `${range.end - range.start}%` }} />
+                <strong style={{ left: `${midpoint}%` }} />
+              </i>
             </div>
-          </section>
-        ))}
-      </div>
+          </article>
+        );
+      })}
+      <footer aria-hidden="true">
+        <span>{axis?.[0]}</span>
+        <span>{axis?.[1]}</span>
+      </footer>
     </div>
   );
 }
 
-function PositioningRankCards({ rows }) {
+function PositioningBarTile({ bars }) {
   return (
-    <div className="positioning-rank-cards">
-      {rows.map((row) => (
-        <article key={row.label} className="positioning-rank-card">
+    <div className="positioning-bar-tile">
+      {bars.map((bar) => (
+        <article key={bar.label} className="positioning-bar-row">
           <header>
-            <div>
-              <span>{row.label}</span>
-              <strong>{row.subject}</strong>
-            </div>
-            <em>{row.localText} / {row.nationalText}</em>
+            <span>{bar.label}</span>
+            <strong>{bar.value}</strong>
+            {bar.meta ? <em>{bar.meta}</em> : null}
           </header>
-          <div className="positioning-rank-rail">
-            <i />
-            <b className="is-local" style={{ left: `${row.local}%` }} />
-            <b className="is-national" style={{ left: `${row.national}%` }} />
+          <div aria-hidden="true">
+            <i>
+              <b style={{ width: `${bar.bar}%` }} />
+            </i>
           </div>
-          <footer>
-            <span>Local</span>
-            <span>National</span>
-          </footer>
         </article>
       ))}
     </div>
   );
+}
+
+function PositioningDomainCell({ cell }) {
+  return <span>{cell}</span>;
 }
 
 function ComparableEvidenceSection({ section, data }) {
@@ -647,47 +654,279 @@ function ComparableEvidenceSection({ section, data }) {
         </Panel>
       </div>
       <Panel title="Comparable Evidence" className="comps-matrix-panel">
-        <ComparableEvidenceMatrix rows={data.comps.evidenceRows} />
+        <ComparableEvidenceMatrix read={data.comps.evidenceRead} rows={data.comps.evidenceRows} />
       </Panel>
     </section>
   );
 }
 
-function IncomeYieldSection({ section, data }) {
+function ValueEnhancementsReturnsSection({ data }) {
   return (
-    <section className="valuation-layout income-layout">
-      <SectionLead section={section} />
-      <div className="income-main">
-        <Panel title="Rental Evidence">
-          <CompactTable columns={["Evidence", "Rent pcm", "£/sqm", "Yield", "Read"]} rows={data.income.rentRows} />
-        </Panel>
-        <Panel title="Yield Position">
-          <BarList rows={data.income.incomeStack} />
-        </Panel>
+    <section className="valuation-layout value-enhancement-layout">
+      <div className="value-enhancement-group-label space-creation-group-label">
+        <span>Space Creation Scenarios</span>
       </div>
-      <Panel title="Income Sensitivity">
-        <CompactTable columns={["Scenario", "Rent pcm", "Yield", "Valuation Read"]} rows={data.income.sensitivity} />
+      <Panel title="Extension & Conversion" className="extension-value-panel">
+        <ExtensionValueTable rows={data.investment.extensionRows} />
+      </Panel>
+      <div className="value-enhancement-group-label retrofit-group-label">
+        <span>Operating Cost Savings</span>
+      </div>
+      <div className="retrofit-sensitivity-grid">
+        {data.investment.retrofitGroups.map((group) => (
+          <Panel key={group.title} title={group.title} className="enhancement-sensitivity-panel">
+            <EnhancementSensitivityCard group={group} />
+          </Panel>
+        ))}
+      </div>
+      <div className="value-enhancement-group-label worked-case-group-label">
+        <span>{data.investment.workedCase.title}</span>
+      </div>
+      <Panel className="worked-upgrade-panel">
+        <WorkedUpgradeCase caseData={data.investment.workedCase} />
       </Panel>
     </section>
   );
 }
 
-function RiskOutlookSection({ section, data }) {
+function InvestmentProformaSection({ data }) {
   return (
-    <section className="valuation-layout risk-layout">
-      <SectionLead section={section} />
-      <div className="risk-main">
-        <Panel title="Risk Register">
-          <CompactTable columns={["Risk", "Level", "Evidence", "Impact"]} rows={data.risk.riskRows} />
-        </Panel>
-        <Panel title="Valuation Scenarios">
-          <CompactTable columns={["Scenario", "Value", "£/sqm", "Rent", "Exit", "Read"]} rows={data.risk.scenarios} />
-        </Panel>
-      </div>
-      <Panel title="Forward Watchpoints">
-        <CompactTable columns={["Driver", "Current", "12M View", "Watchpoint"]} rows={data.risk.outlookRows} />
+    <section className="valuation-layout investment-proforma-layout">
+      <Panel className="investment-proforma-panel">
+        <InvestmentProformaTable proforma={data.investment.proforma} />
       </Panel>
     </section>
+  );
+}
+
+function InvestmentProformaTable({ proforma }) {
+  const formatProformaValue = (value) => {
+    if (value === "—") {
+      return { className: "is-empty-value", text: value };
+    }
+
+    if (typeof value === "string" && value.startsWith("-")) {
+      return { className: "is-negative-value", text: `(${value.slice(1)})` };
+    }
+
+    return { className: "", text: value };
+  };
+
+  const proformaRows = proforma.rows.flatMap((row, rowIndex) => {
+    const rows = [{ ...row, key: `${row.label}-${rowIndex}` }];
+
+    if (row.type === "total" && rowIndex < proforma.rows.length - 1) {
+      rows.push({ type: "spacer", key: `section-gap-${rowIndex}` });
+    }
+
+    return rows;
+  });
+
+  const proformaRowTemplate = proformaRows
+    .map((row) => (row.type === "spacer" ? "0.42fr" : "minmax(0, 1fr)"))
+    .join(" ");
+
+  return (
+    <div className="investment-proforma-table">
+      <div className="investment-proforma-head">
+        {proforma.columns.map((column) => (
+          <span key={column}>{column}</span>
+        ))}
+      </div>
+      <div className="investment-proforma-body" style={{ gridTemplateRows: proformaRowTemplate }}>
+        {proformaRows.map((row) => {
+          if (row.type === "spacer") {
+            return <div key={row.key} className="investment-proforma-spacer" aria-hidden="true" />;
+          }
+
+          if (row.type === "section") {
+            const metrics = row.metrics ?? [];
+
+            return (
+              <div key={row.key} className={`investment-proforma-row is-section${row.result ? " has-results" : ""}`}>
+                <span className="investment-proforma-section-title">{row.label}</span>
+                <span className="investment-proforma-section-note">
+                  {metrics.length ? (
+                    <>
+                      <i aria-hidden="true">(</i>
+                      {metrics.map(([label, value], index) => (
+                        <b key={`${row.label}-${label}`}>
+                          <small>{label}</small>
+                          <i aria-hidden="true">:</i>
+                          <var>{value}</var>
+                          {index < metrics.length - 1 ? <i aria-hidden="true">,</i> : null}
+                        </b>
+                      ))}
+                      <i aria-hidden="true">)</i>
+                    </>
+                  ) : null}
+                </span>
+              </div>
+            );
+          }
+
+          return (
+            <div key={row.key} className={`investment-proforma-row is-${row.type}`}>
+              <span>
+                {row.type === "item" ? <i aria-hidden="true">+</i> : null}
+                {row.label}
+              </span>
+              {row.values.map((value, index) => {
+                const formattedValue = formatProformaValue(value);
+
+                return (
+                  <span key={`${row.label}-${index}`} className={formattedValue.className}>
+                    {formattedValue.text}
+                  </span>
+                );
+              })}
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
+
+function ExtensionValueTable({ rows }) {
+  const headGroups = [
+    ["Case", "Area"],
+    ["Build Cost", "New Value", "Profit"],
+    ["New Rent", "Rental Uplift", "GIY Chg"]
+  ];
+
+  return (
+    <div className="extension-value-table">
+      <p className="extension-value-read">Extension and conversion sensitivities show capex, revised value, rent movement and gross yield.</p>
+      <div className="extension-value-head">
+        {headGroups.map((group) => (
+          <div key={group.join("-")} className="extension-value-group">
+            {group.map((cell) => (
+              <span key={cell}>{cell}</span>
+            ))}
+          </div>
+        ))}
+      </div>
+      <div className="extension-value-body">
+        {rows.map((row) => (
+          <div key={row[0]} className="extension-value-row">
+            {[row.slice(0, 2), row.slice(2, 5), row.slice(5)].map((group, groupIndex) => (
+              <div key={`${row[0]}-${groupIndex}`} className="extension-value-group">
+                {group.map((cell) => (
+                  <span key={`${row[0]}-${cell}`}>{cell}</span>
+                ))}
+              </div>
+            ))}
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function EnhancementSensitivityCard({ group }) {
+  return (
+    <div className="enhancement-sensitivity-card">
+      <p>{group.read}</p>
+      <div className="enhancement-sensitivity-table">
+        <div className="enhancement-sensitivity-head">
+          <span>Case</span>
+          <span>Annual Saving</span>
+          <span>GIY Chg</span>
+        </div>
+        <div className="enhancement-sensitivity-body">
+          {group.rows.map((row) => (
+            <div key={`${group.title}-${row[0]}`} className="enhancement-sensitivity-row">
+              {[row[0], row[1], row[3]].map((cell) => (
+                <span key={`${group.title}-${row[0]}-${cell}`}>{cell}</span>
+              ))}
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function WorkedUpgradeCase({ caseData }) {
+  const [baseCase, upgradeCase] = caseData.cases;
+  const base = Object.fromEntries(baseCase.metrics);
+  const upgrade = Object.fromEntries(upgradeCase.metrics);
+  const sections = [
+    {
+      title: "Base Case",
+      read: "Current value baseline.",
+      stats: [
+        ["Market Val.", base.Value],
+        ["£/m² pa", "£355"]
+      ],
+      rows: [
+        ["Income", base["12m Income"]],
+        ["Yield", base.GIY],
+        ["Beds", base.Beds],
+        ["Area", base["Floor Area"]]
+      ]
+    },
+    {
+      title: "Upgrade Package",
+      read: "Works and capital spend.",
+      stats: [
+        ["Capex", "£136k"],
+        ["£/m² pa", "£242"]
+      ],
+      rows: [
+        ["Loft", "+24 m²"],
+        ["PV export", "5.6 kW"],
+        ["Heat pump", "8 kW"],
+        ["Insulation", "Loft + wall"]
+      ]
+    },
+    {
+      title: "Revised",
+      read: "Post-upgrade value read.",
+      stats: [
+        ["Revised Val.", upgrade.Value],
+        ["£/m² pa", "£334"]
+      ],
+      rows: [
+        ["Income", upgrade["12m Income"]],
+        ["Yield", upgrade.GIY],
+        ["Beds", upgrade.Beds],
+        ["Area", upgrade["Floor Area"]]
+      ]
+    }
+  ];
+
+  return (
+    <div className="worked-upgrade-case">
+      {sections.map((section) => (
+        <article key={section.title} className="upgrade-section">
+          <header className="upgrade-section-header">
+            <div className="upgrade-section-heading-row">
+              <span>{section.title}</span>
+            </div>
+          </header>
+          <div className="upgrade-section-body">
+            <div className="upgrade-section-stats">
+              {section.stats.map(([label, value]) => (
+                <div key={`${section.title}-${label}`} className="upgrade-section-stat">
+                  <span>{label}</span>
+                  <strong>{value}</strong>
+                </div>
+              ))}
+            </div>
+            <div className="upgrade-section-facts">
+              {section.rows.map(([label, value]) => (
+                <div key={`${section.title}-${label}`}>
+                  <span>{label}</span>
+                  <strong>{value}</strong>
+                </div>
+              ))}
+            </div>
+          </div>
+        </article>
+      ))}
+    </div>
   );
 }
 
@@ -1368,24 +1607,6 @@ function HeadlineMetrics({ metrics, compact = false }) {
   );
 }
 
-function BarList({ rows }) {
-  return (
-    <div className="bar-list">
-      {rows.map((row) => (
-        <div key={row.label} className="bar-row">
-          <div>
-            <span>{row.label}</span>
-            <strong>{row.value}</strong>
-          </div>
-          <i>
-            <b style={{ width: `${row.width}%` }} />
-          </i>
-        </div>
-      ))}
-    </div>
-  );
-}
-
 function CompactTable({ columns, rows, className = "" }) {
   return (
     <div className={["compact-table", `cols-${columns.length}`, className].filter(Boolean).join(" ")}>
@@ -1407,9 +1628,10 @@ function CompactTable({ columns, rows, className = "" }) {
   );
 }
 
-function ComparableEvidenceMatrix({ rows }) {
+function ComparableEvidenceMatrix({ read, rows }) {
   return (
     <div className="comparable-evidence-matrix">
+      {read ? <p className="comparable-evidence-read">{read}</p> : null}
       <div className="comparable-evidence-head">
         <span aria-label="Rank" />
         <span className="transaction-head">Transaction</span>
@@ -1454,6 +1676,7 @@ function ComparableEvidenceStats({ metrics }) {
       {metrics.map((group) => (
         <section key={group.title} className="comparable-summary-group">
           <h3>{group.title}</h3>
+          {group.read ? <p className="comparable-summary-read">{group.read}</p> : null}
           <div className="comparable-summary-details">
             {group.metrics.map((metric) => (
               <p key={metric.label}>
